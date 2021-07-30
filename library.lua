@@ -1,3 +1,5 @@
+local library = {}
+
 do
     local moonlib = game:GetService("CoreGui"):FindFirstChild("MoonLibrary")
     if moonlib then moonlib:Destroy() end
