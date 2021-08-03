@@ -470,11 +470,13 @@ do
 				return button
 			end
 
-			function tab_data:MoonLabel(text)
+			function tab_data:MoonLabel(text,alignment)
 				local label = Prefabs:FindFirstChild("Label"):Clone()
 				text = tostring(text or "New Label")
+				alignment = tostring(alignment or "Left")
 
 				label.Text = text
+				label.TextXAlignment = alignment
 				label.Parent = new_tab
 				return label
 			end
