@@ -1,8 +1,9 @@
 local library = {}
 
 do
-    local moonlib = game:GetService("CoreGui"):FindFirstChild("MoonLibrary")
-    if moonlib then moonlib:Destroy() end
+    if game:GetService("CoreGui"):FindFirstChild("MoonLibrary") then
+    	game:GetService("CoreGui"):FindFirstChild("MoonLibrary"):Destroy()
+    end
 end
 
 local MoonLibrary = Instance.new("ScreenGui")
