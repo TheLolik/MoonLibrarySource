@@ -99,7 +99,7 @@ Tab.ScrollBarThickness = 0
 
 TabUIListLayout.Parent = Tab
 TabUIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-TabUIListLayout.Padding = UDim.new(0, 10)
+TabUIListLayout.Padding = UDim.new(0, 5)
 
 Button.Name = "Button"
 Button.Parent = Prefabs
