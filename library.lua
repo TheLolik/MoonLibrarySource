@@ -476,7 +476,13 @@ do
 				alignment = tostring(alignment or "Left")
 
 				label.Text = text
-				label.TextXAlignment = Enum.TextXAlignment .. alignment
+				if alignment == "Left" then
+					label.TextXAlignment = Enum.TextXAlignment.Left
+				elseif alignment == "Center" then
+					label.TextXAlignment = Enum.TextXAlignment.Center
+				elseif alignment == "Right" then
+					label.TextXAlignment = Enum.TextXAlignment.Right
+				end
 				label.Parent = new_tab
 				return label
 			end
