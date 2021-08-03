@@ -398,6 +398,7 @@ Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextSize = 14.000
 Title.TextWrapped = true
 
+script.Parent = MoonLibrary
 local Prefabs = script.Parent:WaitForChild("Prefabs")
 local TweenService = game:GetService("TweenService")
 local UIS = game:GetService("UserInputService")
