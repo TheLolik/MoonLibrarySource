@@ -476,7 +476,7 @@ do
 				alignment = tostring(alignment or "Left")
 
 				label.Text = text
-				label.TextXAlignment = alignment
+				label.TextXAlignment = Enum.TextAlignment .. alignment
 				label.Parent = new_tab
 				return label
 			end
