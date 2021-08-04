@@ -91,15 +91,6 @@ Tab.BorderSizePixel = 0
 Tab.Position = UDim2.new(0.0120667256, 0, 0.172059149, 0)
 Tab.Size = UDim2.new(0, 482, 0, 278)
 Tab.ScrollBarThickness = 0
-local function BHNKUTS_fake_script() -- Tab.LocalScript 
-	local script = Instance.new('LocalScript', Tab)
-
-	script.Parent.CanvasSize = UDim2.new(0,0,0,script.Parent.UIListLayout.AbsoluteContentSize.Y)
-	script.Parent.ChildAdded:Connect(function()
-	    script.Parent.CanvasSize = UDim2.new(0,0,0,script.Parent.UIListLayout.AbsoluteContentSize.Y + 23 + script.Parent.UIListLayout.Padding.Offset)
-	end)
-end
-coroutine.wrap(BHNKUTS_fake_script)()
 
 TabUIListLayout.Parent = Tab
 TabUIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -423,6 +414,15 @@ end
 local tabs = MainFrame:FindFirstChild("Tabs")
 local tab_buttons = MainFrame:FindFirstChild("TabButtons")
 
+local function BHNKUTS_fake_script() -- Tab.LocalScript 
+	local script = Instance.new('LocalScript', Tab)
+
+	script.Parent.CanvasSize = UDim2.new(0,0,0,script.Parent.UIListLayout.AbsoluteContentSize.Y)
+	script.Parent.ChildAdded:Connect(function()
+	    script.Parent.CanvasSize = UDim2.new(0,0,0,script.Parent.UIListLayout.AbsoluteContentSize.Y + 23 + script.Parent.UIListLayout.Padding.Offset)
+	end)
+end
+coroutine.wrap(BHNKUTS_fake_script)()
 
 do
 	function SetTitle(text)
