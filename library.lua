@@ -91,6 +91,10 @@ Tab.BorderSizePixel = 0
 Tab.Position = UDim2.new(0.0120667256, 0, 0.172059149, 0)
 Tab.Size = UDim2.new(0, 482, 0, 278)
 Tab.ScrollBarThickness = 0
+Tab.CanvasSize = UDim2.new(0,0,0,TabUIListLayout.AbsoluteContentSize.Y)
+Tab.ChildAdded:Connect(function()
+    Tab.CanvasSize = UDim2.new(0,0,0,TabUIListLayout.AbsoluteContentSize.Y + 23 + TabUIListLayout.Padding.Offset)
+end)
 
 TabUIListLayout.Parent = Tab
 TabUIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
