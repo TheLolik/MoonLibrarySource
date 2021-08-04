@@ -1,11 +1,5 @@
 local library = {}
 
-do
-    if game:GetService("CoreGui"):FindFirstChild("MoonLibrary") then
-    	game:GetService("CoreGui"):FindFirstChild("MoonLibrary"):Destroy()
-    end
-end
-
 local MoonLibrary = Instance.new("ScreenGui")
 
 local MoonLibrary = Instance.new("ScreenGui")
@@ -361,6 +355,9 @@ Close.Image = "rbxassetid://3926305904"
 Close.ImageRectOffset = Vector2.new(284, 4)
 Close.ImageRectSize = Vector2.new(24, 24)
 Close.SliceCenter = Rect.new(0, 0, 0, 1)
+Close.MouseButton1Click:Connect(function()
+    MoonLibrary.Destroy()
+end)
 
 TabButtons.Name = "TabButtons"
 TabButtons.Parent = MainFrame
