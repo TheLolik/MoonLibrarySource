@@ -414,16 +414,6 @@ end
 local tabs = MainFrame:FindFirstChild("Tabs")
 local tab_buttons = MainFrame:FindFirstChild("TabButtons")
 
-local function BHNKUTS_fake_script() -- Tab.LocalScript 
-	local script = Instance.new('LocalScript', Tab)
-
-	script.Parent.CanvasSize = UDim2.new(0,0,0,script.Parent.UIListLayout.AbsoluteContentSize.Y)
-	script.Parent.ChildAdded:Connect(function()
-	    script.Parent.CanvasSize = UDim2.new(0,0,0,script.Parent.UIListLayout.AbsoluteContentSize.Y + 23 + script.Parent.UIListLayout.Padding.Offset)
-	end)
-end
-coroutine.wrap(BHNKUTS_fake_script)()
-
 do
 	function SetTitle(text)
 		local title = MainFrame:FindFirstChild("Title")
@@ -591,6 +581,16 @@ do
 		return tab_data, new_tab
 	end
 end
+
+local function BHNKUTS_fake_script() -- Tab.LocalScript 
+	local script = Instance.new('LocalScript', Tab)
+
+	script.Parent.CanvasSize = UDim2.new(0,0,0,script.Parent.UIListLayout.AbsoluteContentSize.Y)
+	script.Parent.ChildAdded:Connect(function()
+	    script.Parent.CanvasSize = UDim2.new(0,0,0,script.Parent.UIListLayout.AbsoluteContentSize.Y + 23 + script.Parent.UIListLayout.Padding.Offset)
+	end)
+end
+coroutine.wrap(BHNKUTS_fake_script)()
 
 local function NUYMNO_fake_script() -- MainFrame.Dragify 
 	local script = Instance.new('LocalScript', MainFrame)
