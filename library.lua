@@ -356,7 +356,7 @@ Close.ImageRectOffset = Vector2.new(284, 4)
 Close.ImageRectSize = Vector2.new(24, 24)
 Close.SliceCenter = Rect.new(0, 0, 0, 1)
 Close.MouseButton1Click:Connect(function()
-    MoonLibrary.Destroy()
+    MoonLibrary:Destroy()
 end)
 
 TabButtons.Name = "TabButtons"
